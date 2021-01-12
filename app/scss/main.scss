@@ -118,6 +118,15 @@ html, body {
 
             .portfolio-section {
                 padding-left: 70px;
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+
+                   &:hover .list-head {
+                        text-decoration: underline;
+                    }
+                }
     
                 .list-head {
                     font-size: 36px;

@@ -93,6 +93,11 @@ html, body {
       width: 3px; }
     .landing-page .landing-content .landing-nav .portfolio-section {
       padding-left: 70px; }
+      .landing-page .landing-content .landing-nav .portfolio-section a {
+        color: #fff;
+        text-decoration: none; }
+        .landing-page .landing-content .landing-nav .portfolio-section a:hover .list-head {
+          text-decoration: underline; }
       .landing-page .landing-content .landing-nav .portfolio-section .list-head {
         font-size: 36px;
         color: #FFC900;
