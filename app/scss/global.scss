@@ -6,3 +6,24 @@ p {
 body {
     background: #f2f2f2;
 }
+
+@media (max-width: 768px) {
+    table.table {
+        tr {
+            thead {
+                display: none;;
+            }
+
+            td {
+                display: block;
+                width: 100%;
+
+                &:before {
+                    content: 'attr(data-label)';
+                    display: block;
+                    position: relative;
+                }
+            }
+        }
+    }
+}

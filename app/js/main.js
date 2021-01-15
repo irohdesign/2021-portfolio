@@ -156,8 +156,7 @@ if ($('#bmw-sample')) {
             let rows = [];
     
             data.forEach((e) => {
-                console.log(e);
-                tr = `<tr><td>${e.fiscalYear}</td><td>${e.applicants}</td><td>${e.awardees}</td></tr>`;
+                tr = `<tr><td data-label="Fiscal Year">${e.fiscalYear}</td><td data-label="Applicants">${e.applicants}</td><td data-label="Awardees">${e.awardees}</td></tr>`;
                 rows.push(tr);
             });
 
