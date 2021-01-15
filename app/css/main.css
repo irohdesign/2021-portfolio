@@ -18,6 +18,13 @@ p {
 body {
   background: #f2f2f2; }
 
+html, body {
+  height: 100%;
+  position: relative; }
+
+main {
+  padding-bottom: 20px; }
+
 header {
   background: #000;
   padding: 5px 0; }
@@ -359,6 +366,9 @@ header {
     margin: 40px 0;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; }
+    @media (max-width: 768px) {
+      .project-page .graph-table-container {
+        padding: 20px 0; } }
     .project-page .graph-table-container .bmw-sample-container .graph-header {
       display: flex;
       justify-content: space-between;
@@ -466,10 +476,25 @@ header {
       text-align: center;
       font-size: 16px;
       margin-bottom: 8px; }
+  .project-page .screenshot-container {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: -20px; }
+    .project-page .screenshot-container .project-image {
+      width: 100%;
+      margin: 10px auto; }
+    .project-page .screenshot-container .caption {
+      font-size: 12px;
+      text-align: center; }
 
 footer {
   background: #181d27;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
   footer .footer-content {
     display: flex;
     color: white;

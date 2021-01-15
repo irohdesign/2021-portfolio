@@ -1,7 +1,10 @@
 footer {
     background: $raisin;
     padding: 10px 20px;
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
     .footer-content {
         display: flex;
         color: white;

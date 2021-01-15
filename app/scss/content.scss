@@ -299,6 +299,10 @@
         position: relative;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+        @media (max-width: 768px) {
+            padding: 20px 0;
+        }
+
         .bmw-sample-container {
     
             .graph-header {
@@ -465,6 +469,24 @@
             text-align: center;
             font-size: 16px;
             margin-bottom: 8px;
+        }
+    }
+
+    .screenshot-container {
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-bottom: -20px;
+
+        .project-image {
+            width: 100%;
+            margin: 10px auto;
+        }
+
+        .caption {
+            font-size: 12px;
+            text-align: center;
         }
     }
 }
