@@ -35,6 +35,21 @@ if ($('#bmw-sample').length) {
                     fontSize: 12
                 }
             },
+            tooltip: {
+                trigger: 'axis',
+                formatter: (params) => {
+                    let awardeesComma = params[0].value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    let applicantsComma = params[1].value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    // console.log(params);
+                    return `<strong>Fiscal Year:</strong> ${params[0].axisValue}</br><strong>Awardees:</strong> ${awardeesComma}</br><strong>Applicants:</strong> ${applicantsComma}`;
+                },
+                textStyle: {
+                    fontFamily: 'menlo, sans-serif'
+                },
+                axisPointer: {
+                    snap: true
+                }
+            },
             xAxis:{
                 axisTick: {show: false},
                 data: years,
@@ -299,20 +314,18 @@ if ($('#bmw-sample').length) {
         autoConnectGraph.style.width = widthLineGraph;
         solutionLineGraph.style.width = widthLineGraph;
 
+        bmwInstance.resize();
         disconnectLineInstance.resize();
         autoConnectInstance.resize();
         solutionLineInstance.resize();
-        bmwInstance.resize();
     }
 }
 
 if ($('#bmwFlipper').on('click', (e) => {
     if (e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.value.includes('flipped')) {
         e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.remove('flipped')
-        e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.remove('back-visible')
     } else {
         e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.add('flipped')
-        e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.add('back-visible')
     }
     
 }));
