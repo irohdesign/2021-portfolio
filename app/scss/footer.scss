@@ -1,0 +1,47 @@
+footer {
+    background: $raisin;
+    padding: 10px 20px;
+
+    .footer-content {
+        display: flex;
+        color: white;
+        justify-content: space-between;
+
+        #backToTop {
+            background: transparent;
+            color: white;
+            padding-left: 40px;
+            position: relative;
+            border: solid 1px #fff;
+            border-radius: 5px;
+            transition: .3s;
+
+            &::after {
+                display: block;
+                content: '\2039';
+                background-size: cover;
+                position: absolute;
+                height: 15px;
+                width: 15px;
+                transform: rotate(90deg);
+                color: white;
+                left: 30px;
+                font-size: 30px;
+                top: 3.5px;
+                transition: .3s;
+            }
+
+            &:hover {
+                background: white;
+                color: black;
+                transition: .3s;
+                border-color: black;
+
+                &::after {
+                    color: black;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}
