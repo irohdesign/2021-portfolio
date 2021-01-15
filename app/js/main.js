@@ -1,7 +1,7 @@
 let option;
 
 // bmw
-if ($('#bmw-sample')) {
+if ($('#bmw-sample').length) {
     var bmwSample = document.getElementById('bmw-sample');
     bmwSample.style.height = '380px';
     bmwSample.style.width = '100%';
@@ -29,7 +29,11 @@ if ($('#bmw-sample')) {
         option = {
             legend: {
                 data: ['Awardees', 'Applicants'],
-                top: 0
+                top: 0,
+                textStyle: {
+                    fontFamily: 'menlo, sans-serif',
+                    fontSize: 12
+                }
             },
             xAxis:{
                 axisTick: {show: false},
@@ -37,7 +41,9 @@ if ($('#bmw-sample')) {
                 name: 'Fiscal Years',
                 nameLocation: 'middle',
                 nameTextStyle: {
-                    padding: [15, 0, 0, 0]
+                    padding: [15, 0, 0, 0],
+                    fontFamily: 'menlo, sans-serif',
+                    fontSize: 12
                 }
             },
             grid: {
@@ -60,7 +66,9 @@ if ($('#bmw-sample')) {
                     },
                     nameLocation: 'middle',
                     nameTextStyle: {
-                        padding: [0, 0, 25, 0]
+                        padding: [0, 0, 25, 0],
+                        fontFamily: 'menlo, sans-serif',
+                        fontSize: 12
                     }
                 }
             ],
