@@ -24,6 +24,8 @@ html, body {
 
 main {
   padding-bottom: 20px; }
+  main.landing-page {
+    padding-bottom: 0; }
 
 header {
   background: #000;
@@ -138,7 +140,7 @@ header {
         margin-bottom: 5px; } }
 
 .landing-page {
-  background: #000;
+  background: #181d27;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -206,7 +208,7 @@ header {
       .landing-page .landing-content h1::after {
         animation: vertTextReveal 1s forwards;
         animation-delay: .7s;
-        background: black;
+        background: #181d27;
         content: "";
         display: block;
         height: 100%;
@@ -239,7 +241,7 @@ header {
         .landing-page .landing-content .landing-nav .portfolio-section .list-head::after {
           animation: sideTextReveal 4s forwards;
           animation-delay: 1.9s;
-          background: black;
+          background: #181d27;
           content: "";
           display: block;
           height: 100%;
@@ -292,7 +294,7 @@ header {
           .landing-page .landing-content .landing-nav .portfolio-section ul li::after {
             animation: sideTextReveal 4s forwards;
             animation-delay: 3.7s;
-            background: black;
+            background: #181d27;
             content: "";
             display: block;
             height: 100%;
@@ -445,6 +447,12 @@ header {
         height: 530px; } }
   .project-page .front, .project-page .back {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
     position: absolute;
     top: 0;
     left: 0; }
@@ -482,6 +490,9 @@ header {
     border-radius: 20px;
     margin-top: 20px;
     margin-bottom: -20px; }
+    .project-page .screenshot-container.copy-image {
+      margin-bottom: 20px;
+      margin-top: -10px; }
     .project-page .screenshot-container .project-image {
       width: 100%;
       margin: 10px auto; }

@@ -309,8 +309,10 @@ if ($('#bmw-sample').length) {
 if ($('#bmwFlipper').on('click', (e) => {
     if (e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.value.includes('flipped')) {
         e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.remove('flipped')
+        e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.remove('back-visible')
     } else {
         e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.add('flipped')
+        e.currentTarget.parentNode.childNodes[1].childNodes[1].classList.add('back-visible')
     }
     
 }));

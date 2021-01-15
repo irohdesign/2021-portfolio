@@ -1,6 +1,6 @@
 // landing page base layout
 .landing-page {
-    background: $black;
+    background: $raisin;
     color: $white;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@
             &::after {
                 animation: vertTextReveal 1s forwards;
                 animation-delay: .7s;
-                background: black;
+                background: $raisin;
                 content: "";
                 display: block;
                 height: 100%;
@@ -116,7 +116,7 @@
                     &::after {
                         animation: sideTextReveal 4s forwards;
                         animation-delay: 1.9s;
-                        background: black;
+                        background: $raisin;
                         content: "";
                         display: block;
                         height: 100%;
@@ -185,7 +185,7 @@
                         &::after {
                             animation: sideTextReveal 4s forwards;
                             animation-delay: 3.7s;
-                            background: black;
+                            background: $raisin;
                             content: "";
                             display: block;
                             height: 100%;
@@ -420,6 +420,12 @@
 
     .front, .back {
         backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: 0.6s;
+        transition: 0.6s;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
 
         position: absolute;
         top: 0;
@@ -478,6 +484,11 @@
         border-radius: 20px;
         margin-top: 20px;
         margin-bottom: -20px;
+
+        &.copy-image {
+            margin-bottom: 20px;
+            margin-top: -10px;
+        }
 
         .project-image {
             width: 100%;

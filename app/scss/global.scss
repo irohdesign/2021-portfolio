@@ -14,6 +14,10 @@ html, body {
 
 main {
     padding-bottom: 20px;
+
+    &.landing-page {
+        padding-bottom: 0;
+    }
 }
 
 // @media (max-width: 768px) {
