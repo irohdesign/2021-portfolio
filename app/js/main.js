@@ -168,97 +168,39 @@ if ($('#bmw-sample')) {
     });
 
     var disconnectLineGraph = document.getElementById('disconnectedLineGraph');
-        var heightLineGraph = '380px';
-        var widthLineGraph = '32%'
-        var displayLineGraph = 'inline-block';
+    var heightLineGraph = '380px';
+    var widthLineGraph = '32%'
+    var displayLineGraph = 'inline-block';
 
-        if (window.innerWidth < 768) {
-            widthLineGraph = '100%'
-        }
+    if (window.innerWidth < 768) {
+        widthLineGraph = '100%'
+    }
 
-        disconnectLineGraph.style.height = heightLineGraph;
-        disconnectLineGraph.style.width = widthLineGraph;
-        disconnectLineGraph.style.display = displayLineGraph;
+    disconnectLineGraph.style.height = heightLineGraph;
+    disconnectLineGraph.style.width = widthLineGraph;
+    disconnectLineGraph.style.display = displayLineGraph;
 
-        var disconnectLineInstance = echarts.init(disconnectLineGraph);
+    var disconnectLineInstance = echarts.init(disconnectLineGraph);
 
-        option = {
-            legend: {
-                data: ['Black, Green, Red, Orange']
-            },
-            title: {
-                text: 'With Gaps',
-                textAlign: 'center',
-                left: '120',
-                textStyle: {
-                    fontFamily: 'menlo, sans-serif',
-                    fontSize: 16
-                }
-            },
-            grid: {
-                left: 50
-            },
-            xAxis: {type: 'category'},
-            yAxis: {},
-            series: [
-                {
-                    name: 'Black',
-                    type: 'line',
-                    color: '#000',
-                    lineStyle: {
-                        width: 3
-                    },
-                    data: [0, 120, 50, undefined, 100, 90, 230, 210]
-                }
-            ]
-        }
-
-        disconnectLineInstance.setOption(option);
-
-
-        var autoConnectGraph = document.getElementById('autoConnectedLineGraph');
-        autoConnectGraph.style.height = heightLineGraph;
-        autoConnectGraph.style.width = widthLineGraph;
-        autoConnectGraph.style.display = displayLineGraph;
-
-        var autoConnectInstance = echarts.init(autoConnectGraph);
-
-        option.series = [
-            {
-                name: 'Black',
-                type: 'line',
-                connectNulls: true,
-                color: '#000',
-                lineStyle: {
-                    width: 3
-                },
-                data: [0, 120, 50, undefined, 100, 90, 230, 210]
+    option = {
+        legend: {
+            data: ['Black, Green, Red, Orange']
+        },
+        title: {
+            text: 'With Gaps',
+            textAlign: 'center',
+            left: '120',
+            textStyle: {
+                fontFamily: 'menlo, sans-serif',
+                fontSize: 16
             }
-        ]
-
-        option.title.text = "Connected Nulls"
-
-        autoConnectInstance.setOption(option);
-
-        var solutionLineGraph = document.getElementById('solutionLineGraph');
-        solutionLineGraph.style.height = heightLineGraph;
-        solutionLineGraph.style.width = widthLineGraph;
-        solutionLineGraph.style.display = displayLineGraph;
-
-        solutionLineInstance = echarts.init(solutionLineGraph);
-
-        option.series = [
-            {
-                name: 'Black',
-                type: 'line',
-                color: '#aaa',
-                connectNulls: true,
-                lineStyle: {
-                    width: 2,
-                    type: 'dashed'
-                },
-                data: [0, 120, 50, undefined, 100, 90, 230, 210]
-            },
+        },
+        grid: {
+            left: 50
+        },
+        xAxis: {type: 'category'},
+        yAxis: {},
+        series: [
             {
                 name: 'Black',
                 type: 'line',
@@ -269,24 +211,68 @@ if ($('#bmw-sample')) {
                 data: [0, 120, 50, undefined, 100, 90, 230, 210]
             }
         ]
+    }
 
-        option.title.text = "Custom Dashes"
+    disconnectLineInstance.setOption(option);
 
-        solutionLineInstance.setOption(option);
-    // line-disconnected
-    // if ($('#disconnectedLineGraph')) {
-        
 
-            // disconnectLineGraph.style.height = heightLineGraph;
-            // autoConnectGraph.style.height = heightLineGraph;
-            // solutionLineGraph.style.height = heightLineGraph;
+    var autoConnectGraph = document.getElementById('autoConnectedLineGraph');
+    autoConnectGraph.style.height = heightLineGraph;
+    autoConnectGraph.style.width = widthLineGraph;
+    autoConnectGraph.style.display = displayLineGraph;
 
-            // disconnectLineGraph.style.width = widthLineGraph;
-            // autoConnectGraph.style.width = widthLineGraph;
-            // solutionLineGraph.style.width = widthLineGraph;
+    var autoConnectInstance = echarts.init(autoConnectGraph);
 
-            
-    // }
+    option.series = [
+        {
+            name: 'Black',
+            type: 'line',
+            connectNulls: true,
+            color: '#000',
+            lineStyle: {
+                width: 3
+            },
+            data: [0, 120, 50, undefined, 100, 90, 230, 210]
+        }
+    ]
+
+    option.title.text = "Connected Nulls"
+
+    autoConnectInstance.setOption(option);
+
+    var solutionLineGraph = document.getElementById('solutionLineGraph');
+    solutionLineGraph.style.height = heightLineGraph;
+    solutionLineGraph.style.width = widthLineGraph;
+    solutionLineGraph.style.display = displayLineGraph;
+
+    solutionLineInstance = echarts.init(solutionLineGraph);
+
+    option.series = [
+        {
+            name: 'Black',
+            type: 'line',
+            color: '#aaa',
+            connectNulls: true,
+            lineStyle: {
+                width: 2,
+                type: 'dashed'
+            },
+            data: [0, 120, 50, undefined, 100, 90, 230, 210]
+        },
+        {
+            name: 'Black',
+            type: 'line',
+            color: '#000',
+            lineStyle: {
+                width: 3
+            },
+            data: [0, 120, 50, undefined, 100, 90, 230, 210]
+        }
+    ]
+
+    option.title.text = "My Solution"
+
+    solutionLineInstance.setOption(option);
 
     window.onresize = () => {
         // bmwSample.style.width = '100%';
