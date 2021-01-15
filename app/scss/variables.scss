@@ -1,0 +1,38 @@
+// fonts
+
+// variables
+$white: #fff;
+$black: #000;
+$yellow: #FFC900;
+$lavender: #909CC2;
+$blue: #084887;
+$robin: #1885F2;
+$ghost: #F7F5FB;
+$pink: #92374D;
+
+
+// green theme
+$yellowGreen: #D0DB97;
+$medSeaGreen: #69B578;
+$fern: #3A7D44;
+$racing: #254d32;
+$raisin: #181d27;
+
+// global
+html, body {
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: table;
+    position: relative;
+}
+
+// global
+* {
+    font-family: menlo, sans-serif;
+}
+
+.sr-only {
+    display: none;
+}
