@@ -9,6 +9,8 @@ footer {
         display: flex;
         color: white;
         justify-content: space-between;
+        max-width: 1400px;
+        margin: auto;
 
         #backToTop {
             background: transparent;
@@ -43,6 +45,20 @@ footer {
                 &::after {
                     color: black;
                     transition: .3s;
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            text-align: center;
+
+            #backToTop {
+                margin-top: 8px;
+
+                &::after {
+                    left: 33%;
+                    top: 6px;
                 }
             }
         }
