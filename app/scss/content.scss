@@ -283,6 +283,13 @@
         a {
             font-weight: 900;
             color: $black;
+            text-decoration: underline;
+            transition: .3s;
+
+            &:hover {
+                color: $blue;
+                transition: .3s;
+            }
         }
     }
 
